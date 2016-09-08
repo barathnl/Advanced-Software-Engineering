@@ -1,0 +1,12 @@
+html,body{
+    height: 100%;
+}
+a{
+    width: 100%;
+}
+.row{
+    padding-top: 5px;
+}
+label{
+    padding-bottom: 25px;
+}
