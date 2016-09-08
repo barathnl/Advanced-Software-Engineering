@@ -5,4 +5,6 @@ Please find answers in Wiki
 
 Lab 1 : https://github.com/barathnl/CS5551_ASE_LabAssignments_by_Barath/wiki/Lab-Assignment-1
 
+Lab 2 : https://github.com/barathnl/CS5551_ASE_LabAssignments_by_Barath/wiki/Lab-Assignment-2
+
 Barath
