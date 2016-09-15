@@ -7,4 +7,6 @@ Lab 1 : https://github.com/barathnl/CS5551_ASE_LabAssignments_by_Barath/wiki/Lab
 
 Lab 2 : https://github.com/barathnl/CS5551_ASE_LabAssignments_by_Barath/wiki/Lab-Assignment-2
 
+Lab 3 : https://github.com/barathnl/CS5551_ASE_LabAssignments_by_Barath/wiki/Lab-Assignment-3
+
 Barath
