@@ -1,0 +1,33 @@
+<ion-view title="Home" id="page1">
+    <ion-content padding="true" style="background: url(img/30W8hJ09TqSv0fjF4ic1_Rinema_interactive_collage.png) no-repeat center;background-size:cover;" class="has-header">
+        <form id="home-form5" class="list">
+            <label class="item item-input" id="home-input6">
+                <input id="skey" type="text" placeholder="Movie Name">
+            </label>
+        </form>
+        <button id="home-button6" class="button button-positive  button-block" ng-click="searchVideo()">Search Movie</button>
+		<div id="div_ReviewList" style="display:none;"  >
+			 <p ng-model="ReviewWithSentiment">
+				<TABLE BORDER=2 CELLPADDING=4> 
+					<TR> <TH COLSPAN=2 style="color: aliceblue; background:#F4D03F">{{ReviewWithSentiment.mtitle}}</TH> </TR>
+					<TR style="color: aliceblue; background:#445553;align:center"> <TD></TD> <TD><img ng-src={{ReviewWithSentiment.mposter}} alt="No Movie Poster available" height="60%" width="40%"> </img></TD> </TR>
+					<TR style="color: aliceblue; background:#445553"> <TD>Genre:</TD> <TD>{{ReviewWithSentiment.mgenre}}</TD> </TR>
+					<TR style="color: aliceblue; background:#445553"> <TD>Runtime:</TD> <TD>{{ReviewWithSentiment.mruntime}}</TD> </TR>
+					<TR style="color: aliceblue; background:#445553"> <TD>Director:</TD> <TD>{{ReviewWithSentiment.mdirector}}</TD> </TR>
+					<TR style="color: aliceblue; background:#445553"> <TD>Writors </TD> <TD>{{ReviewWithSentiment.mwriter}}</TD> </TR>
+					<TR style="color: aliceblue; background:#445553"> <TD>Cast:</TD> <TD>{{ReviewWithSentiment.mcast}}</TD> </TR>					
+					<TR style="color: aliceblue; background:#445553"> <TH COLSPAN=2>Plot : {{ReviewWithSentiment.mplot}}</TH> </TR>
+				</TABLE>
+			 </p>
+			 <button id="home-button6" class="button button-balanced  button-block" ng-click="searchCritic()">Get NYT Movie Critic</button>
+		</div>
+		<div id="div_ReviewList1" style="display:none;"  >
+			<p ng-model="ReviewWithSentiment1">
+			<TABLE BORDER=2 CELLPADDING=4> 
+					<TR> <TH style="color: aliceblue; background:#F4D03F" COLSPAN=2>The New York Times Movie Review</TH> </TR>
+					<TR><TD style="color: aliceblue; background:#445553">{{ReviewWithSentiment1.mreview}}</TD></TR>
+			</TABLE>
+			</p>
+		</div>
+    </ion-content>
+</ion-view>
