@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>KC Weather</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--W3 CSS--->
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+        <!-- JS -->
+        <!-- load angular, ngRoute, ngAnimate -->
+        <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="myApp" style="background: url(img/backgrd.jpg) no-repeat center;background-size:cover;">
+            <nav class="navbar navbar-default" style="height: 10%;background-color: #1aa3ff">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1">
+                            <img src="img/icon.png" width="60px" height="60px">
+                        </div>
+                        <div class="col-md-10">
+                            <h2><b>Kansas City WeatherCheck</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        <div class="container-fluid" ng-controller="KCweather">
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="color:White"><b>Current Weather</b></p>
+                    <div class="tablestyle">
+                        <table class="w3-table w3-striped w3-border w3-centered">
+                            <tr class="w3-brown"><th colspan="2" align="center">Kansas City</th></tr>
+                            <tr>
+                                <td colspan="2"> {{temp}} C</td>
+                            </tr>
+                            <tr class="w3-white">
+                                <td>Min Temp {{mintemp}} C</td>
+                                <td>Max Temp {{maxtemp}} C</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tablestyle">
+                        <table class="w3-table w3-striped w3-border">
+                            <tr class="w3-green"><th colspan="2" align="center">Current Weather Info</th></tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td>{{humidity}} %</td>
+                            </tr>
+                            <tr class="w3-white">
+                                <td>Average Presure</td>
+                                <td>{{pressure}} hPa</td>
+                            </tr>
+                            <tr>
+                                <td>Ground Level Pressure</td>
+                                <td>{{gnd_level}} hPa</td>
+                            </tr>
+                            <tr class="w3-white">
+                                <td>Sea Level Preesure</td>
+                                <td>{{sea_level}} hPa</td>
+                            </tr>
+                        </table>
+                    </div>                                   
+                </div>
+                <div class="col-md-8">
+                    <p style="color:White"><b>Forecat Weather</b></p>
+                    <div>
+                        <table class="w3-table w3-striped w3-border w3-centered">
+                            <tr class="w3-deep-orange">
+                                <th>{{dt1}}</th>
+                                <th>{{dt2}}</th>
+                                <th>{{dt3}}</th>
+                                <th>{{dt4}}</th>
+                                <th>{{dt5}}</th>
+                                <th>{{dt6}}</th>
+                                <th>{{dt7}}</th>
+                            </tr>
+                            <tr>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon1}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon2}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon3}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon4}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon5}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon6}}.png"></td>
+                                <td><img ng-src="http://openweathermap.org/img/w/{{icon7}}.png"></td>
+                            </tr>
+                            <tr class="w3-white">
+                                <td>{{wdetail1}}</td>
+                                <td>{{wdetail2}}</td>
+                                <td>{{wdetail3}}</td>
+                                <td>{{wdetail4}}</td>
+                                <td>{{wdetail5}}</td>
+                                <td>{{wdetail6}}</td>
+                                <td>{{wdetail7}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{temp1}} C</td>
+                                <td>{{temp2}} C</td>
+                                <td>{{temp3}} C</td>
+                                <td>{{temp4}} C</td>
+                                <td>{{temp5}} C</td>
+                                <td>{{temp6}} C</td>
+                                <td>{{temp7}} C</td>
+                            </tr>
+                            <tr class="w3-white">
+                                <td>{{wind1}} m/s</td>
+                                <td>{{wind2}} m/s</td>
+                                <td>{{wind3}} m/s</td>
+                                <td>{{wind4}} m/s</td>
+                                <td>{{wind5}} m/s</td>
+                                <td>{{wind6}} m/s</td>
+                                <td>{{wind7}} m/s</td>
+                            </tr>
+                            <tr>
+                                <td>{{hum1}} %</td>
+                                <td>{{hum2}} %</td>
+                                <td>{{hum3}} %</td>
+                                <td>{{hum4}} %</td>
+                                <td>{{hum5}} %</td>
+                                <td>{{hum6}} %</td>
+                                <td>{{hum7}} %</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
