@@ -1,0 +1,67 @@
+<html ng-app="demoMongo" ng-controller="MongoRestController" class="h1">
+<head >
+    <title>Registration</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body style="background: url(img/backgrdimage.jpg) no-repeat center;background-size:cover;">
+        <div class="container">
+        <form class="contact_form"  ng-submit="insertData()" name="contact_form">
+
+
+
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <h3>Account Registration / Login</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="text" class="form-control" name="fname" placeholder="First Name" ng-model="formData.fname" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="text" class="form-control" name="lname" ng-model="formData.lname" placeholder="Last Name" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="email" class="form-control" name="email" ng-model="formData.email" placeholder="xyz@mail.com" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="password" name="password" class="form-control" ng-model="formData.password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="password" name="cpassword" class="form-control" ng-model="formData.cpassword" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">
+                        <input type="submit" class="btn btn-primary" name="Sign In"  value="Sign Up"/>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="button" value="Login" class="btn btn-primary" onclick="redirect()"/>
+                    </div>
+                </div>
+
+        </form>
+
+        </div>
+<script>
+    function redirect() {
+        window.location='CRUD.html';
+    }
+</script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
